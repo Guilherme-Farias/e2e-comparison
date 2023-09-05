@@ -1,0 +1,24 @@
+{
+  "name": "e2e-comparison",
+  "author": "Guilherme Carneiro de Farias",
+  "version": "1.0.0",
+  "homepage": "https://github.com/Guilherme-Farias/e2e-comparison#readme",
+  "description": "Comparison of automated testing tools in web application environments",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Guilherme-Farias/e2e-comparison.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Guilherme-Farias/e2e-comparison/issues"
+  },
+  "keywords": [
+    "e2e",
+    "Cypress",
+    "Selenium",
+    "Playwright",
+    "Testing",
+    "QA"
+  ],
+  "scripts": {}
+}
