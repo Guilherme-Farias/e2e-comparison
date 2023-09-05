@@ -20,5 +20,8 @@
     "Testing",
     "QA"
   ],
-  "scripts": {}
+  "scripts": {},
+  "devDependencies": {
+    "typescript": "^5.2.2"
+  }
 }
