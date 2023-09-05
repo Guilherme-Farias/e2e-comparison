@@ -1,2 +1,16 @@
+# Node
 node_modules/
+
+# Typescript
 dist/
+
+# Cypress
+cypress.env.json
+cypress/downloads/
+cypress/screenshots/
+cypress/videos/
+
+# Playwright
+/test-results/
+/playwright-report/
+/playwright/.cache/
