@@ -24,12 +24,12 @@
     "format": "prettier . --write \"**/*.+(js|jsx|json|yml|yaml|css|less|scss|ts|tsx|md|gql|graphql|mdx|vue)\"",
     "lint": "eslint --ext js,ts .",
     "lint:fix": "eslint --ext js,ts . --fix",
-    "playwright:debug": "NODE_ENV=test.local npx playwright --debug",
-    "playwright:gen": "NODE_ENV=test.local npx playwright codegen",
-    "playwright:install": "NODE_ENV=test.local npx playwright install",
-    "playwright:report": "NODE_ENV=test.local npx playwright show-report",
-    "playwright:run": "NODE_ENV=test.local playwright test",
-    "playwright:ui": "NODE_ENV=test.local playwright test --ui",
+    "playwright:debug": "npx playwright --debug",
+    "playwright:gen": "npx playwright codegen",
+    "playwright:install": "npx playwright install",
+    "playwright:report": "npx playwright show-report",
+    "playwright:run": "playwright test",
+    "playwright:ui": "playwright test --ui",
     "prepare": "husky install"
   },
   "dependencies": {

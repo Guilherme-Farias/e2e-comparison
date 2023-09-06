@@ -1,13 +1,11 @@
 import z from 'zod';
 import * as dotenv from 'dotenv';
 
-if (process.env.NODE_ENV) {
-  dotenv.config({
-    path: `.env.${process.env.NODE_ENV}`,
-  });
-} else {
-  throw new Error('Must have NODE_ENV variable');
-}
+dotenv.config({
+  path: process.env.NODE_ENV
+    ? `.env.${process.env.NODE_ENV}`
+    : '.env.test.local',
+});
 
 const envSchema = z.object({
   BASE_URL: z.string().url(),
@@ -28,7 +26,7 @@ const envSchema = z.object({
   COMERCIAL_NAME: z.string(),
   COMERCIAL_EMAIL: z.string().email(),
   COMERCIAL_PASSWORD: z.string().min(6).max(30),
-  NODE_ENV: z.enum(['test', 'test.local']),
+  NODE_ENV: z.enum(['test', 'test.local']).default('test.local'),
 });
 
 export const ENV = envSchema.parse(process.env);
