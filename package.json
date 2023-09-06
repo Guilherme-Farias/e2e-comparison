@@ -22,13 +22,24 @@
   ],
   "scripts": {
     "format": "prettier . --write \"**/*.+(js|jsx|json|yml|yaml|css|less|scss|ts|tsx|md|gql|graphql|mdx|vue)\"",
-    "lint": "eslint --ext js,jsx,ts,tsx .",
-    "lint:fix": "eslint --ext js,jsx,ts,tsx . --fix",
+    "lint": "eslint --ext js,ts .",
+    "lint:fix": "eslint --ext js,ts . --fix",
+    "playwright:debug": "NODE_ENV=test.local npx playwright --debug",
+    "playwright:gen": "NODE_ENV=test.local npx playwright codegen",
+    "playwright:install": "NODE_ENV=test.local npx playwright install",
+    "playwright:report": "NODE_ENV=test.local npx playwright show-report",
+    "playwright:run": "NODE_ENV=test.local playwright test",
+    "playwright:ui": "NODE_ENV=test.local playwright test --ui",
     "prepare": "husky install"
+  },
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "zod": "^3.22.2"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.7.1",
     "@commitlint/config-conventional": "^17.7.0",
+    "@playwright/test": "^1.37.1",
     "@typescript-eslint/eslint-plugin": "^6.6.0",
     "@typescript-eslint/parser": "^6.6.0",
     "eslint": "^8.48.0",
