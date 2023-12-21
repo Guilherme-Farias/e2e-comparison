@@ -10,7 +10,7 @@ export const test = base.extend<{
         await page.goto('/tcc');
         await page.locator('input[name="email"]').fill(email);
         await page.locator('input[name="password"]').fill(password);
-        await page.getByRole('button', { name: /entrar/i }).click();
+        await page.getByRole('button', { name: /^entrar$/i }).click();
         return page;
       });
     },
